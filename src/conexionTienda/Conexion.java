@@ -10,7 +10,7 @@ public class Conexion {
 
   private static Conexion instancia;
 
-  private static final String url = "jdbc:mysql://localhost/db_tienda";
+  private static final String link = "jdbc:mysql://localhost/db_tienda";
   private static final String userName = "root";
   private static final String password = "";
 
@@ -18,7 +18,7 @@ public class Conexion {
   public Connection conectar(){
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
-      conexion = DriverManager.getConnection(url, userName, password);
+      conexion = DriverManager.getConnection(link, userName, password);
       return conexion;
     }catch (Exception e){
       JOptionPane.showMessageDialog(null,"error: " + e);
